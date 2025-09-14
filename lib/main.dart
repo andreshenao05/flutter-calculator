@@ -135,17 +135,15 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 buildButton('-', color: Colors.orange, onPressed: () => _append('-')),
               ]),
               buildButtonRow([
+                buildButton('%', color: Colors.orange, onPressed: () => _append('%')),
                 buildButton('0', onPressed: () => _append('0')),
                 buildButton('.', onPressed: () => _append('.')),
                 buildButton('C', color: Colors.red, onPressed: _clear),
-                buildButton('+', color: Colors.orange, onPressed: () => _append('+')),
               ]),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  buildButton('=', color: Colors.green, onPressed: _evaluate),
-                ],
-              ),
+              buildButtonRow([
+                buildButton('+', color: Colors.orange, onPressed: () => _append('+')),
+                buildButton('=', color: Colors.green, onPressed: _evaluate),
+              ]),
             ],
           ),
         ),
